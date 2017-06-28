@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+         http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+         version="2.1">
+	<persistence-unit name="sinergia-dcargo-model">
+<!-- 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> -->
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.sinergia.dcargo.client.shared.Cliente</class>
+		<class>com.sinergia.dcargo.client.shared.Conocimiento</class>
+		<class>com.sinergia.dcargo.client.shared.Guia</class>
+		<class>com.sinergia.dcargo.client.shared.LugarDato</class>
+		<class>com.sinergia.dcargo.client.shared.Oficina</class>
+		<class>com.sinergia.dcargo.client.shared.Persona</class>
+		<class>com.sinergia.dcargo.client.shared.TipoPago</class>		
+		<class>com.sinergia.dcargo.client.shared.Usuario</class>
+		<class>com.sinergia.dcargo.client.shared.Transportista</class>
+		<class>com.sinergia.dcargo.client.shared.Unidad</class>
+		<class>com.sinergia.dcargo.client.shared.Item</class>
+		<class>com.sinergia.dcargo.client.shared.Precio</class>
+		<properties>
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/dcargo" />
+<!-- 			<property name="hibernate.connection.url" value="jdbc:mysql://ec2-54-214-97-192.us-west-2.compute.amazonaws.com:3306/dcargo" /> -->
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="control123!" />
+<!-- 			<property name="hibernate.connection.password" value="Monamis_123!" /> -->
+
+			<!-- <property name="hibernate.hbm2ddl.auto" value="create-drop"/> -->
+			<property name="hibernate.show_sql" value="false" />
+<!-- 			<property name="hibernate.ejb.entitymanager_factory_name" value="sinergia-dcargo-model" /> -->
+			
+			<property name="hibernate.format_sql" value="true" />
+			<property name="hibernate.cache.use_second_level_cache" value="false" />
+			<property name="hibernate.archive.autodetection" value="true" />
+
+		</properties>
+	</persistence-unit>
+</persistence> 
